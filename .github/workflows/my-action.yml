@@ -14,7 +14,8 @@ jobs:
               run: echo "Hello, Github Actions!"
             
     # Job to build and test our C code
-    needs: [say-hello]
+    build-and-test:
+        needs: [say-hello]
         runs-on: ubuntu-latest
         steps:
             # Use github.com/actions/checkout to check-out this repo
